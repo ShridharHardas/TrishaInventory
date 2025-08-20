@@ -1,6 +1,9 @@
 package io.stock.inventory.supplier.dto;
 
-import java.util.Date;
+
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import org.springframework.stereotype.Component;
 
@@ -11,7 +14,7 @@ public class SupplierRequest {
 	
 	private long mobileno;
 	
-	private Date time;
+	private LocalDate time;
 
 	public String getSupplier_name() {
 		return supplier_name;
@@ -31,11 +34,11 @@ public class SupplierRequest {
 		return this;
 	}
 
-	public Date getTime() {
+	public LocalDate getTime() {
 		return time;
 	}
 
-	public SupplierRequest setTime(Date time) {
+	public SupplierRequest setTime(LocalDate time) {
 		this.time = time;
 		return this;
 	}

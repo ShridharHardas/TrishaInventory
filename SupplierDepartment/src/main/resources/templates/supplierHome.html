@@ -19,6 +19,13 @@
       font-weight: bold;
       color: #fff !important;
     }
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+    }
+    .navbar-nav .nav-link:hover {
+      text-decoration: underline;
+    }
     .hero-section {
       background: #eaf4fe;
       padding: 60px 20px;
@@ -54,10 +61,31 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg">
   <div class="container">
+    <!-- Brand Logo -->
     <a class="navbar-brand" href="#">
       <img src="https://via.placeholder.com/40" alt="Trisha Logo" class="me-2 rounded-circle">
       Trisha Technologies
     </a>
+
+    <!-- Toggler for mobile view -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" th:href="@{/stock/inventory/supplier/home}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/stock/inventory/supplier/list}">Supplier List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/stock/inventory/supplier/addSupplier}">Register Supplier</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 
@@ -66,7 +94,7 @@
   <div class="hero-section">
     <h1>Welcome to Supplier Portal</h1>
     <p class="lead">Empowering business with smart procurement solutions</p>
-    <button class="btn btn-primary btn-lg">Explore Suppliers</button>
+    <a th:href="@{/supplier/list}" class="btn btn-primary btn-lg">Explore Suppliers</a>
   </div>
 </div>
 

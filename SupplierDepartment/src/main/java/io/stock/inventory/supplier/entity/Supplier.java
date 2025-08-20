@@ -1,5 +1,7 @@
 package io.stock.inventory.supplier.entity;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -25,7 +27,7 @@ public class Supplier {
 	
 	private long mobileno;
 	
-	private Date time;
+	private LocalDate time;
 
 	public Long getSupplier_id() {
 		return supplier_id;
@@ -54,11 +56,11 @@ public class Supplier {
 		return this;
 	}
 
-	public Date getTime() {
+	public LocalDate getTime() {
 		return time;
 	}
 
-	public Supplier setTime(Date time) {
+	public Supplier setTime(LocalDate time) {
 		this.time = time;
 		return this;
 	}

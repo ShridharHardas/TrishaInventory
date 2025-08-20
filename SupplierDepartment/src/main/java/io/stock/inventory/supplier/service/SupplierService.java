@@ -36,10 +36,10 @@ public class SupplierService {
 	}
 	public void deleteSupplier(Long id)
 	{
-		return repo.deleteById(id);
+		 repo.deleteById(id);
 	}
 	
-	public Supplier updateSupplierDetails(SupplierRequest request)
+	public Supplier updateSupplierDetails(Supplier request)
 	{
 		return repo.save(request);
 	}
