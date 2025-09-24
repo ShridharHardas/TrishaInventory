@@ -16,7 +16,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import io.stock.inventory.purchase.model.Support;
 
 @SpringBootTest
-//@DataJpaTest
+@DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.AUTO_CONFIGURED.ANY)
 public class SupportRepoTest {
 
